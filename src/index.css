@@ -1,0 +1,12 @@
+@import "tailwindcss";
+@font-face {
+  font-family: Dancing;
+  src: url("../src//assets//Fonts/DancingScript-Regular.ttf");
+}
+
+@theme {
+  --font-Dancing: Dancing, "sans-serif";
+  --breakpoint-ss: 150px;
+  --breakpoint-ssr: 350px;
+  --breakpoint-navB: 1160px;
+}
