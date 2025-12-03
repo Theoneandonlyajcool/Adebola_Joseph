@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { FiMenu } from "react-icons/fi";
 import { useNavigate } from "react-router-dom";
 import MobileNavModal from "./MobileNavModal";
@@ -19,7 +19,6 @@ const Header = () => {
             {"< Adebola Joseph/>"}
           </p>
         </div>
-
         {/* Nav links */}
         <nav className=" w-full min-w-fit   md:max-w-[60%] hidden navB:block">
           <ul className="flex w-full justify-between items-center gap-2 lg:gap-2">
@@ -51,6 +50,7 @@ const Header = () => {
             ].map((ele, idx) => {
               return (
                 <li
+                  key={idx}
                   className="cursor-pointer text-lg text-[#00072d]  p-2  hover:border-b-2 hover:border-gray-700 w-fit transition-all  duration-300"
                   onClick={() => {
                     nav(ele.NavTo);
@@ -62,9 +62,7 @@ const Header = () => {
             })}
           </ul>
         </nav>
-
         {/* Mobile navigation */}
-
         <nav className="navB:hidden ss:w-full ss:flex ss:justify-end">
           <FiMenu
             className="text-3xl cursor-pointer"
@@ -73,6 +71,7 @@ const Header = () => {
 
           {openMobileNav && <MobileNavModal closeModal={SetOpenMobieNav} />}
         </nav>
+        ``
       </div>
     </div>
   );

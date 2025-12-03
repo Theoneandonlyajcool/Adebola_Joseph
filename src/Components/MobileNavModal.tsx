@@ -1,6 +1,4 @@
-import React from "react";
 import { FaXmark } from "react-icons/fa6";
-
 import { IoHomeSharp } from "react-icons/io5";
 import { IoSchoolSharp } from "react-icons/io5";
 import { MdWork } from "react-icons/md";
@@ -11,7 +9,7 @@ import { FaPhone } from "react-icons/fa6";
 import { useNavigate } from "react-router-dom";
 
 type MobileNavprops = {
-  closeModal: boolean;
+  closeModal: (value: boolean) => void;
 };
 
 const MobileNavModal = ({ closeModal }: MobileNavprops) => {
@@ -65,6 +63,7 @@ const MobileNavModal = ({ closeModal }: MobileNavprops) => {
             },
           ].map((ele, idx) => (
             <button
+              key={idx}
               className="border-b border-b-gray-700  w-full h-[15%] flex justify-start items-center px-4 cursor-pointer hover:bg-[#7fcbfd] transition-all ease-in-out duration-500"
               onClick={() => {
                 nav(ele.NavTo);
