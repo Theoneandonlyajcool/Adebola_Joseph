@@ -11,7 +11,7 @@ const HomePage = () => {
         <div className="border-2 border-red-900 w-full max-w-[90%] ">
           {/* About section */}
 
-          <div className="border-2 border-blue-600 w-full h-[100vh]">
+          <div className="border-2 border-blue-600 w-full h-screen">
             {/* Write up */}
             <div>
               <h1>Adebola Joseph</h1>
@@ -34,7 +34,7 @@ const HomePage = () => {
           width="711.1879"
           height="669.68268"
           viewBox="0 0 711.1879 669.68268"
-          className="border-2 border-red-700 w-full sm:w-[20rem] h-[20rem] "
+          className="border-2 border-red-700 w-full sm:w-[20rem] h-80 "
         >
           <title>feeling_proud</title>
           <polygon

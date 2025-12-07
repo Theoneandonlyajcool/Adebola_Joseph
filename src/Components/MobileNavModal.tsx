@@ -17,9 +17,9 @@ const MobileNavModal = ({ closeModal }: MobileNavprops) => {
 
   const nav = useNavigate();
   return (
-    <div className="bg-gray-900/30 h-[100vh] w-full top-0 left-0 fixed flex justify-end absolute">
+    <div className="bg-gray-900/30 h-screen w-full top-0 left-0 fixed flex justify-end ">
       {/* Modal */}
-      <div className="bg-white w-[100%] ssr:w-[70%] md:w-[50%] h-full">
+      <div className="bg-white w-full ssr:w-[70%] md:w-[50%] h-full">
         {/* close */}
         <div className="relative  w-full h-[8vh] flex justify-end items-center">
           <FaXmark
