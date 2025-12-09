@@ -17,7 +17,7 @@ const MobileNavModal = ({ closeModal }: MobileNavprops) => {
 
   const nav = useNavigate();
   return (
-    <div className="bg-gray-900/30 h-screen w-full top-0 left-0 fixed flex justify-end ">
+    <div className="bg-gray-900/30 h-screen w-full top-0 left-0 fixed flex justify-end z-1000 ">
       {/* Modal */}
       <div className="bg-white w-full ssr:w-[70%] md:w-[50%] h-full">
         {/* close */}

@@ -2,7 +2,7 @@ import Router from "./Routes/Router";
 
 const App = () => {
   return (
-    <div>
+    <div className="">
       <p className="bg-[#edfaff]">
         <Router />
       </p>

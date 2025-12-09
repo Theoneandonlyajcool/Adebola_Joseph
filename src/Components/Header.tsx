@@ -8,7 +8,7 @@ const Header = () => {
 
   const nav = useNavigate();
   return (
-    <div className=" h-[15vh] flex justify-center items-center">
+    <div className=" h-[10vh] lg:h-[15vh] flex justify-center items-center">
       <div className=" w-full max-w-[90%] h-full flex justify-between items-center ss:flex-col ssr:flex-row">
         {/* Logo */}
         <div className="ss:w-full min-w-fit">
@@ -51,7 +51,7 @@ const Header = () => {
               return (
                 <li
                   key={idx}
-                  className="cursor-pointer text-lg text-[#00072d]  p-2  hover:border-b-2 hover:border-gray-700 w-fit transition-all  duration-300"
+                  className="cursor-pointer text-lg text-[#00072d] hover:font-bold p-2 w-fit transition-all ease-in-out duration-300"
                   onClick={() => {
                     nav(ele.NavTo);
                   }}
@@ -71,7 +71,6 @@ const Header = () => {
 
           {openMobileNav && <MobileNavModal closeModal={SetOpenMobieNav} />}
         </nav>
-        ``
       </div>
     </div>
   );
