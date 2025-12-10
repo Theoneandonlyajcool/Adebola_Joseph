@@ -36,7 +36,15 @@ const HomePage = () => {
                   {/* Second batch */}
                   <div className="flex items-center gap-4 flex-wrap">
                     <div className="social-button">
-                      <button className="cursor-pointer relative w-12 h-12 rounded-full group">
+                      <button
+                        className="cursor-pointer relative w-12 h-12 rounded-full group"
+                        onClick={() => {
+                          const url = "https://github.com/Theoneandonlyajcool";
+                          const target = "_blank";
+
+                          window.open(url, target);
+                        }}
+                      >
                         <div className="floater w-full h-full absolute top-0 left-0 bg-black rounded-full duration-300 group-hover:-top-8 group-hover:shadow-2xl"></div>
                         <div className="icon relative z-10 w-full h-full flex items-center justify-center border-2 border-black rounded-full">
                           <svg
@@ -593,11 +601,22 @@ const HomePage = () => {
           </div>
 
           {/* What i do section */}
-          <div></div>
+          <div className="border-2 w-full justify-center items-center text-center mt-8">
+            <h1 className="font-bold text-[#020c45] text-2xl md:text-4xl xl:text-5xl 2xl:text-6xl">
+              What I Do ?
+            </h1>
+
+            {/* Front end developement */}
+            <div className="border-2 border-red-800 mt-6 h-screen w-full flex justify-center items-center">
+              {/* Container */}
+
+              <div className="border-2 border-blue-800 w-full h-full max-h-[95%]"></div>
+            </div>
+          </div>
         </div>
       </div>
 
-      <div></div>
+      {/* <div></div> */}
     </div>
   );
 };

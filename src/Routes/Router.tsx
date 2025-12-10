@@ -1,16 +1,20 @@
 import { HashRouter, Routes, Route } from "react-router-dom";
+import IntroPage from "../Pages/IntroPage";
 import HomePage from "../Pages/HomePage";
 import EducationPage from "../Pages/EducationPage";
 import ExperiencePage from "../Pages/ExperiencePage";
 import ProjectsPage from "../Pages/ProjectsPage";
 import OpenSource from "../Pages/OpenSource";
 import ContactPage from "../Pages/ContactPage";
+import PageNotFound from "../Pages/PageNotFound";
 
 const Router = () => {
   return (
     <HashRouter>
       <Routes>
-        <Route path="/" element={<HomePage />} />
+        <Route path="/" element={<IntroPage />} />
+        <Route path="*" element={<PageNotFound />} />
+        <Route path="/home" element={<HomePage />} />
         <Route path="/education" element={<EducationPage />} />
         <Route path="/experience" element={<ExperiencePage />} />
         <Route path="/projects" element={<ProjectsPage />} />
