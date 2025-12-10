@@ -234,7 +234,7 @@ const HomePage = () => {
             </div>
 
             {/* Image */}
-            <div className="w-full md:max-w-[50%] h-[55%] md:h-full ">
+            <div className="w-full md:max-w-[50%] h-[55%] md:h-full border-2 border-red-500 flex justify-center items-center">
               <svg
                 id="b52d7e2d-d80f-4111-b6ed-d15502ee1edd"
                 data-name="Layer 1"
@@ -242,7 +242,7 @@ const HomePage = () => {
                 width="711.1879"
                 height="669.68268"
                 viewBox="0 0 711.1879 669.68268"
-                className="w-full h-full "
+                className="w-full h-full max-h-[90%] "
               >
                 <title>feeling_proud</title>
                 <polygon
