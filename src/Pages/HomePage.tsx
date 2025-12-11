@@ -906,7 +906,7 @@ const HomePage = () => {
 
               {/* content */}
 
-              <div className="h-[50%] min-h-fit md:h-full w-full md:max-w-[50%] flex flex-col justify-center items-start">
+              <div className="h-[50%] min-h-fit md:h-full w-full md:max-w-[50%] flex flex-col justify-center items-center mt-2 md:mt-0">
                 <h1 className="text-xl text-[#00072e] md:text-3xl xl:text-4xl 2xl:text-4xl  ">
                   Front-end Development
                 </h1>
