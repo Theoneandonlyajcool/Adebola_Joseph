@@ -622,7 +622,7 @@ const HomePage = () => {
             </h1>
 
             {/* what i do content */}
-            <div className=" w-full h-[90%] flex flex-col md:flex-row justify-between">
+            <div className=" w-full h-[90%] flex flex-col md:flex-row justify-between mb-6 md:mb-0">
               {/* Image conatiner */}
 
               <div className=" h-[45%] md:h-full w-full md:max-w-[45%]">
@@ -1006,7 +1006,7 @@ const HomePage = () => {
 
                 {/* text */}
 
-                <div className=" w-full h-fit">
+                <div className=" w-full min-h-fit ">
                   {[
                     {
                       text: "Building fast, responsive, and user-focused web interfaces using React, Next.js , TypeScript & Tailwind CSS",
