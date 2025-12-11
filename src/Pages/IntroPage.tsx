@@ -19,7 +19,7 @@ const IntroPage = () => {
     "Adebola Joseph",
   ];
 
-  const typingSpeed = 100;
+  const typingSpeed = 200;
   const deletingSpeed = 50;
   const pauseTime = 2000;
 
@@ -58,7 +58,7 @@ const IntroPage = () => {
   useEffect(() => {
     setTimeout(() => {
       nav("/home");
-    }, 3000);
+    }, 4000);
   });
 
   return (
