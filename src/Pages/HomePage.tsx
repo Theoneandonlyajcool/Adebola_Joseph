@@ -169,7 +169,14 @@ const HomePage = () => {
 
                     {/* Youtube */}
 
-                    <div className="social-button">
+                    <div
+                      onClick={() => {
+                        const url = "https://www.youtube.com/@Code_Xero1";
+                        const target = "_blank";
+                        window.open(url, target);
+                      }}
+                      className="social-button"
+                    >
                       <button className="cursor-pointer relative w-12 h-12 rounded-full group">
                         <div className="floater w-full h-full absolute top-0 left-0 bg-red-700 rounded-full duration-300 group-hover:-top-8 group-hover:shadow-2xl"></div>
                         <div className="icon relative z-10 w-full h-full flex items-center justify-center border-2 border-red-700 rounded-full">
@@ -198,6 +205,13 @@ const HomePage = () => {
                 {/* Star me on github */}
                 <button
                   // href="#"
+
+                  onClick={() => {
+                    const url =
+                      "https://github.com/Theoneandonlyajcool/Adebola_Joseph";
+                    const target = "_blank";
+                    window.open(url, target);
+                  }}
                   className="flex overflow-hidden items-center text-sm font-medium focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 bg-[#000b46] text-white shadow hover:bg-[#00072e]/90 cursor-pointer h-9 px-4 py-2 max-w-52 whitespace-pre md:flex group relative w-full justify-center gap-2 rounded-md transition-all duration-300 ease-out hover:ring-2 hover:ring-black hover:ring-offset-2"
                 >
                   <span className="absolute right-0 -mt-12 h-32 w-8 translate-x-12 rotate-12 bg-white opacity-10 transition-all duration-1000 ease-out group-hover:-translate-x-40"></span>
@@ -234,7 +248,7 @@ const HomePage = () => {
             </div>
 
             {/* Image */}
-            <div className="w-full md:max-w-[50%] h-[55%] md:h-full border-2 border-red-500 flex justify-center items-center">
+            <div className="w-full md:max-w-[50%] h-[55%] md:h-full flex justify-center items-center">
               <svg
                 id="b52d7e2d-d80f-4111-b6ed-d15502ee1edd"
                 data-name="Layer 1"

@@ -44,7 +44,7 @@ const PageNotFound = () => {
         Return Home
       </button> */}
       <button
-        className="bg-white text-center w-[16rem] rounded-2xl h-14 relative text-black text-xl font-semibold group"
+        className="bg-white cursor-pointer text-center w-[16rem] rounded-2xl h-14 relative text-black text-xl font-semibold group"
         type="button"
         onClick={() => navigate("/")}
       >
