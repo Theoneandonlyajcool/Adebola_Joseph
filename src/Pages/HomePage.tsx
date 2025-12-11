@@ -1,4 +1,5 @@
 import Header from "../Components/Header";
+import Footer from "../Components/Footer";
 
 const HomePage = () => {
   return (
@@ -1038,6 +1039,7 @@ const HomePage = () => {
           {/*  */}
         </div>
       </div>
+      <Footer />
     </div>
   );
 };
