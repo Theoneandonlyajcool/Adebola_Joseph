@@ -11,7 +11,7 @@ const ContactPage = () => {
         <div className="w-full max-w-[90%] ">
           {/* Contact me section */}
 
-          <div className="h-screen justify-between flex flex-col md:flex-row gap-2 md:gap-0">
+          <div className="h-screen justify-between flex mb-4 flex-col md:flex-row gap-2 md:gap-0">
             {/* image container */}
             <div className=" w-full md:max-w-[50%] h-[40%] md:h-full flex justify-center items-center">
               <img
@@ -206,7 +206,7 @@ const ContactPage = () => {
 
               {/* Resume button */}
 
-              <button className="relative inline-flex items-center justify-center px-8 py-2.5 overflow-hidden tracking-tighter text-white bg-[#00072e] rounded-md group cursor-pointer mt-4">
+              <button className="relative inline-flex items-center justify-center px-8 py-5 md:py-2.5 overflow-hidden tracking-tighter text-white bg-[#00072e] rounded-md group cursor-pointer ">
                 <span className="absolute w-0 h-0 transition-all duration-500 ease-out bg-cyan-800 rounded-full group-hover:w-56 group-hover:h-56"></span>
                 <span className="absolute bottom-0 left-0 h-full -ml-2">
                   <svg
@@ -238,7 +238,7 @@ const ContactPage = () => {
                 </span>
                 <span className="absolute inset-0 w-full h-full -mt-1 rounded-lg opacity-30 bg-linear-to-b from-transparent via-transparent to-gray-200"></span>
                 <span className="relative text-base font-semibold">
-                  Hover Me !
+                  See My Resume
                 </span>
               </button>
             </div>
@@ -246,7 +246,7 @@ const ContactPage = () => {
 
           {/* second section */}
 
-          <div className="mt-4 border-4 border-green-700 w-full h-screen flex justify-between flex-col md:flex-row">
+          <div className=" border-4 border-green-700 w-full h-screen flex justify-between flex-col md:flex-row">
             {/* Text contnet */}
             <div className="border-2 border-red-800 w-full md:max-w-[50%] h-[55%] md:h-full flex flex-col justify-center text-center items-center">
               <h1 className="text-2xl md:text-4xl 2xl:text-6xl font-bold">
