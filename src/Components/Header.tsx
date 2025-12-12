@@ -1,10 +1,18 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { FiMenu } from "react-icons/fi";
 import { useNavigate } from "react-router-dom";
 import MobileNavModal from "./MobileNavModal";
+import { useLocation } from "react-router-dom";
 
 const Header = () => {
   const [openMobileNav, SetOpenMobieNav] = useState(false);
+  const [ActivePage, SetActivePage] = useState("home");
+  const browserLocation = useLocation();
+  const currentLoaction = browserLocation.pathname;
+
+  useEffect(() => {
+    SetActivePage(currentLoaction);
+  }, []);
 
   const nav = useNavigate();
   return (
@@ -26,34 +34,44 @@ const Header = () => {
               {
                 onPage: "Home",
                 NavTo: "/",
+                activePage: "/home",
               },
               {
                 onPage: "Education",
                 NavTo: "/education",
+                activePage: "/education",
               },
               {
                 onPage: "Experience",
                 NavTo: "/experience",
+                activePage: "/experience",
               },
               {
                 onPage: "Projects",
                 NavTo: "/projects",
+                activePage: "/projects",
               },
               {
                 onPage: "Open Source",
                 NavTo: "/opensource",
+                activePage: "/opensource",
               },
               {
                 onPage: "Contact Me",
                 NavTo: "/contact",
+                activePage: "/contact",
               },
             ].map((ele, idx) => {
               return (
                 <li
                   key={idx}
-                  className="cursor-pointer text-lg text-[#00072d] hover:font-bold p-2 w-fit transition-all ease-in-out duration-300"
+                  className={`cursor-pointer ${
+                    ele.activePage == ActivePage && "font-bold"
+                  } text-lg text-[#00072d] hover:bg-[#7fcbfd] p-2 w-fit transition-all ease-in-out duration-300`}
                   onClick={() => {
+                    SetActivePage(ele.activePage);
                     nav(ele.NavTo);
+                    // setTimeout(() => {}, 1000);
                   }}
                 >
                   {ele.onPage}
