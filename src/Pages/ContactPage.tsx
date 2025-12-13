@@ -1,4 +1,5 @@
 import Header from "../Components/Header";
+import Footer from "../Components/Footer";
 
 const ContactPage = () => {
   return (
@@ -844,6 +845,8 @@ const ContactPage = () => {
           {/*  */}
         </div>
       </div>
+
+      <Footer />
     </div>
   );
 };

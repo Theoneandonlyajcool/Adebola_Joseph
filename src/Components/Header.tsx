@@ -51,11 +51,11 @@ const Header = () => {
                 NavTo: "/projects",
                 activePage: "/projects",
               },
-              {
-                onPage: "Open Source",
-                NavTo: "/opensource",
-                activePage: "/opensource",
-              },
+              // {
+              //   onPage: "Open Source",
+              //   NavTo: "/opensource",
+              //   activePage: "/opensource",
+              // },
               {
                 onPage: "Contact Me",
                 NavTo: "/contact",
