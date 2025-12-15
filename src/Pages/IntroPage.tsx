@@ -90,11 +90,11 @@ const IntroPage = () => {
               src="
             https://res.cloudinary.com/dp75oveuw/image/upload/v1765404162/New_AJ_favicon-removebg-preview_riy189.png"
               alt=""
-              className="w-24 h-24"
+              className="w-24 h-24 animate-pulse"
             />
           </motion.div>
 
-          <p className="text-4xl md:text-3xl xl:text-5xl  text-g font-Dancing text-cyan-200">
+          <p className=" text-4xl md:text-3xl xl:text-5xl  text-g font-Dancing text-cyan-100">
             {displayText}
             <span className="animate-pulse">|</span>
           </p>

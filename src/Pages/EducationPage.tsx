@@ -1,10 +1,13 @@
 import Header from "../Components/Header";
+import { Fade } from "react-awesome-reveal";
 
 const EducationPage = () => {
   return (
     <div>
       <Header />
-      Education
+      <Fade direction="down" duration={1000} damping={0.1} triggerOnce>
+        <p>I will gently appear as I enter the viewport</p>
+      </Fade>
     </div>
   );
 };
