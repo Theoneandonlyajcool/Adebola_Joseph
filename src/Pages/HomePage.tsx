@@ -18,7 +18,7 @@ const HomePage = () => {
             duration={1000}
             damping={0.9}
             triggerOnce
-            className="z-10"
+            // className="z-10"
           >
             <div className=" w-full min-h-fit h-screen flex flex-col md:flex-row justify-between">
               {/* Write up */}
@@ -638,7 +638,14 @@ const HomePage = () => {
             <div className=" w-full h-[90%] flex flex-col md:flex-row justify-between mb-6 md:mb-0">
               {/* Image conatiner */}
 
-              <div className=" h-[45%] md:h-full w-full md:max-w-[45%]">
+              <Fade
+                direction="left"
+                duration={1000}
+                damping={0.1}
+                triggerOnce
+                className=" h-[45%] md:h-full w-full md:max-w-[45%]"
+              >
+                {/* <div className=" h-[45%] md:h-full w-full md:max-w-[45%]"> */}
                 <svg
                   id="f0a8f4ba-cc2b-4400-9e08-d246a0bad060"
                   data-name="Layer 1"
@@ -914,134 +921,155 @@ const HomePage = () => {
                     fill="#0E6BA8"
                   ></path>
                 </svg>
-              </div>
+                {/* </div> */}
+              </Fade>
 
               {/* content */}
 
               <div className="h-[50%] min-h-fit md:h-full w-full md:max-w-[50%] flex flex-col justify-center items-center mt-2 md:mt-0">
-                <h1 className="text-xl text-[#00072e] md:text-3xl xl:text-4xl 2xl:text-4xl  ">
-                  Front-end Development
-                </h1>
+                <Fade
+                  direction="right"
+                  duration={600}
+                  damping={0.1}
+                  triggerOnce
+                >
+                  <h1 className="text-xl text-[#00072e] md:text-3xl xl:text-4xl 2xl:text-4xl  ">
+                    Front-end Development
+                  </h1>
+                </Fade>
 
                 {/* Icons */}
+                <Fade
+                  direction="right"
+                  duration={800}
+                  damping={0.1}
+                  triggerOnce
+                >
+                  <div className="flex flex-wrap  w-full justify-center items-center">
+                    {[
+                      {
+                        path: "/Images/3973c796-c272-48a9-b6d8-d4d18e755e52.svg",
+                        logoName: "HTML5",
+                      },
+                      {
+                        path: "/Images/e4a94a00-ea90-4cc9-9109-e127d5471b86.svg",
+                        logoName: "CSS3",
+                      },
+                      {
+                        path: "/Images/892323d7-04cf-4a31-9e97-f88bbbfa8fba.svg",
+                        logoName: "SAAS",
+                      },
+                      {
+                        path: "/Images/styled-components-svgrepo-com.svg",
+                        logoName: "Styled components",
+                      },
+                      {
+                        path: "/Images/tailwind-svgrepo-com.svg",
+                        logoName: "Tailwind CSS",
+                      },
+                      {
+                        path: "/Images/29c627e7-d2c6-4c34-be70-c9dc4239593d.svg",
+                        logoName: "JavaScript",
+                      },
+                      {
+                        path: "/Images/typescript-official-svgrepo-com.svg",
+                        logoName: "TypeScript ",
+                      },
+                      {
+                        path: "/Images/b99b508b-1c66-491c-936b-90903d129601.svg",
+                        logoName: "React.js",
+                      },
+                      {
+                        path: "/Images/next-dot-js-svgrepo-com.svg",
+                        logoName: "Next.js",
+                      },
+                      {
+                        path: "/Images/git-svgrepo-com.svg",
+                        logoName: "Git",
+                      },
+                      {
+                        path: "/Images/vercel-fill-svgrepo-com.svg",
+                        logoName: "Vercel",
+                      },
+                    ].map((ele, idx) => {
+                      return (
+                        // <div
+                        //   key={idx}
+                        //   className="border-2 border-green-600 w-16 h-16 flex flex-col m-4 justify-center items-center shadow-lg rounded-xl"
+                        // >
+                        //   <img
+                        //     className="text-4xl w-12 h-12"
+                        //     src={ele.path}
+                        //     alt=""
+                        //   />
 
-                <div className="flex flex-wrap  w-full justify-center items-center">
-                  {[
-                    {
-                      path: "/Images/3973c796-c272-48a9-b6d8-d4d18e755e52.svg",
-                      logoName: "HTML5",
-                    },
-                    {
-                      path: "/Images/e4a94a00-ea90-4cc9-9109-e127d5471b86.svg",
-                      logoName: "CSS3",
-                    },
-                    {
-                      path: "/Images/892323d7-04cf-4a31-9e97-f88bbbfa8fba.svg",
-                      logoName: "SAAS",
-                    },
-                    {
-                      path: "/Images/styled-components-svgrepo-com.svg",
-                      logoName: "Styled components",
-                    },
-                    {
-                      path: "/Images/tailwind-svgrepo-com.svg",
-                      logoName: "Tailwind CSS",
-                    },
-                    {
-                      path: "/Images/29c627e7-d2c6-4c34-be70-c9dc4239593d.svg",
-                      logoName: "JavaScript",
-                    },
-                    {
-                      path: "/Images/typescript-official-svgrepo-com.svg",
-                      logoName: "TypeScript ",
-                    },
-                    {
-                      path: "/Images/b99b508b-1c66-491c-936b-90903d129601.svg",
-                      logoName: "React.js",
-                    },
-                    {
-                      path: "/Images/next-dot-js-svgrepo-com.svg",
-                      logoName: "Next.js",
-                    },
-                    {
-                      path: "/Images/git-svgrepo-com.svg",
-                      logoName: "Git",
-                    },
-                    {
-                      path: "/Images/vercel-fill-svgrepo-com.svg",
-                      logoName: "Vercel",
-                    },
-                  ].map((ele, idx) => {
-                    return (
-                      // <div
-                      //   key={idx}
-                      //   className="border-2 border-green-600 w-16 h-16 flex flex-col m-4 justify-center items-center shadow-lg rounded-xl"
-                      // >
-                      //   <img
-                      //     className="text-4xl w-12 h-12"
-                      //     src={ele.path}
-                      //     alt=""
-                      //   />
+                        //   <p className="font-semibold  ">{ele.logoName}</p>
+                        // </div>
 
-                      //   <p className="font-semibold  ">{ele.logoName}</p>
-                      // </div>
+                        // Second option
 
-                      // Second option
+                        // <button className="cursor-pointer w-fit h-fit  bg-transparent p-3 rounded-full scale-50 hover:scale-100 hover:invert-0 hover:p-0 flex transition-all">
+                        //   <img src={ele.path} className="w-16 h-16" alt="" />
+                        // </button>
 
-                      // <button className="cursor-pointer w-fit h-fit  bg-transparent p-3 rounded-full scale-50 hover:scale-100 hover:invert-0 hover:p-0 flex transition-all">
-                      //   <img src={ele.path} className="w-16 h-16" alt="" />
-                      // </button>
+                        // Third option
 
-                      // Third option
-
-                      <div className="group relative m-4" key={idx}>
-                        <button>
-                          <img
-                            src={ele.path}
-                            className="w-8 xl:w-10 h-8 xl:h-10 hover:scale-125 duration-200 hover:stroke-blue-500 cursor-pointer"
-                            alt=""
-                          />
-                        </button>
-                        <span
-                          className="absolute -top-14 left-[50%] -translate-x-[50%] 
+                        <div className="group relative m-4" key={idx}>
+                          <button>
+                            <img
+                              src={ele.path}
+                              className="w-8 xl:w-10 h-8 xl:h-10 hover:scale-125 duration-200 hover:stroke-blue-500 cursor-pointer"
+                              alt=""
+                            />
+                          </button>
+                          <span
+                            className="absolute -top-14 left-[50%] -translate-x-[50%] 
   z-20 origin-left scale-0 px-3 rounded-lg border-2 
   border-blue-400 bg-[#00072e] text-white py-2 text-sm font-bold
   shadow-md transition-all duration-300 ease-in-out 
   group-hover:scale-100"
-                        >
-                          {ele.logoName}
-                          <span></span>
-                        </span>
-                      </div>
-                    );
-                  })}
-                </div>
+                          >
+                            {ele.logoName}
+                            <span></span>
+                          </span>
+                        </div>
+                      );
+                    })}
+                  </div>
+                </Fade>
 
                 {/* text */}
-
-                <div className=" w-full min-h-fit ">
-                  {[
-                    {
-                      text: "Building fast, responsive, and user-focused web interfaces using React, Next.js , TypeScript & Tailwind CSS",
-                    },
-                    {
-                      text: "Crafting clean, scalable UI components with attention to accessibility, design systems, and maintainability",
-                    },
-                    {
-                      text: "Creating smooth animations & interactive user experiences using modern libraries and micro-interactions",
-                    },
-                  ].map((ele, idx) => {
-                    return (
-                      <div
-                        key={idx}
-                        className="flex text-start my-2 text-[#5683e9] text-lg 2xl:text-xl"
-                      >
-                        <span className="text-xl font-semibold mr-1">⚡</span>{" "}
-                        <p>{ele.text}</p>
-                      </div>
-                    );
-                  })}
-                </div>
+                <Fade
+                  direction="right"
+                  // cascade
+                  duration={1000}
+                  damping={0.1}
+                  triggerOnce
+                >
+                  <div className=" w-full min-h-fit ">
+                    {[
+                      {
+                        text: "Building fast, responsive, and user-focused web interfaces using React, Next.js , TypeScript & Tailwind CSS",
+                      },
+                      {
+                        text: "Crafting clean, scalable UI components with attention to accessibility, design systems, and maintainability",
+                      },
+                      {
+                        text: "Creating smooth animations & interactive user experiences using modern libraries and micro-interactions",
+                      },
+                    ].map((ele, idx) => {
+                      return (
+                        <div
+                          key={idx}
+                          className="flex text-start my-2 text-[#5683e9] text-lg 2xl:text-xl"
+                        >
+                          <span className="text-xl font-semibold mr-1">⚡</span>{" "}
+                          <p>{ele.text}</p>
+                        </div>
+                      );
+                    })}
+                  </div>
+                </Fade>
 
                 {/*  */}
               </div>
