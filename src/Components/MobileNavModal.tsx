@@ -2,7 +2,7 @@ import { FaXmark } from "react-icons/fa6";
 import { IoHomeSharp } from "react-icons/io5";
 import { IoSchoolSharp } from "react-icons/io5";
 import { MdWork } from "react-icons/md";
-import { FaCode } from "react-icons/fa";
+// import { FaCode } from "react-icons/fa";
 import { BiSolidBookAlt } from "react-icons/bi";
 import { FaPhone } from "react-icons/fa6";
 import { useNavigate } from "react-router-dom";
