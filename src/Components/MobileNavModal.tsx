@@ -8,6 +8,7 @@ import { FaPhone } from "react-icons/fa6";
 import { useNavigate } from "react-router-dom";
 import { Fade } from "react-awesome-reveal";
 import { createPortal } from "react-dom";
+import { useLocation } from "react-router-dom";
 
 type MobileNavprops = {
   closeModal: (value: boolean) => void;
@@ -15,6 +16,9 @@ type MobileNavprops = {
 
 const MobileNavModal = ({ closeModal }: MobileNavprops) => {
   //   console.log(`This is the close modal value ${closeModal()}`);
+
+  const location = useLocation();
+  const currentLocation = location.pathname;
 
   const modalRoot = document.getElementById("modal-root") as HTMLElement;
 
@@ -31,7 +35,7 @@ const MobileNavModal = ({ closeModal }: MobileNavprops) => {
       {/* Modal */}
       <Fade
         direction="right"
-        duration={1000}
+        duration={500}
         damping={0.1}
         triggerOnce
         className="bg-transparent h-screen w-full top-0 left-0 fixed flex justify-end "
@@ -68,11 +72,11 @@ const MobileNavModal = ({ closeModal }: MobileNavprops) => {
                 icon: <BiSolidBookAlt />,
                 NavTo: "/projects",
               },
-              {
-                onPage: "Open Source",
-                icon: <FaCode />,
-                NavTo: "/opensource",
-              },
+              // {
+              //   onPage: "Open Source",
+              //   icon: <FaCode />,
+              //   NavTo: "/opensource",
+              // },
               {
                 onPage: "Contact Me",
                 icon: <FaPhone />,
@@ -81,13 +85,23 @@ const MobileNavModal = ({ closeModal }: MobileNavprops) => {
             ].map((ele, idx) => (
               <button
                 key={idx}
-                className="border-b border-b-gray-700  w-full h-[15%] flex justify-start items-center px-4 cursor-pointer hover:bg-[#7fcbfd] transition-all ease-in-out duration-500"
+                className={`${
+                  ele.NavTo == currentLocation
+                    ? "bg-[#005e9d] text-white font-bold"
+                    : "hover:bg-[#7fcbfd]"
+                } border-b border-b-gray-700  w-full h-[15%] flex justify-start items-center px-4 cursor-pointer  transition-all ease-in-out duration-500`}
                 onClick={() => {
                   nav(ele.NavTo);
                   closeModal(false);
                 }}
               >
-                <p className="font-bold  text-2xl mx-2 text-blue-950">
+                <p
+                  className={` ${
+                    currentLocation == ele.NavTo
+                      ? "text-white"
+                      : "text-blue-950"
+                  } font-bold text-2xl mx-2 `}
+                >
                   {" "}
                   {ele.icon}
                 </p>
