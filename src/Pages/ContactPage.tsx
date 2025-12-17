@@ -21,6 +21,7 @@ const ContactPage = () => {
                   src="/Images/profile_resized-removebg-preview.png"
                   className="w-[65%] h-[65%] md:w-80 md:h-80 2xl:w-120 2xl:h-120 bg-[#00072e] border-3 border-cyan-700 rounded-full object-contain"
                   alt=""
+                  loading="lazy"
                 />
               </div>
 

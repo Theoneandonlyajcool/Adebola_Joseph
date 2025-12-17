@@ -1,13 +1,32 @@
 import Header from "../Components/Header";
+import KwikQImage from "/Images/KwikQ.png";
+import DevbyteImage from "/Images/Devbyte.png";
+import EazytranzzImage from "/Images/EazyTranzz.png";
+import ReactIcon from "/Images/b99b508b-1c66-491c-936b-90903d129601.svg";
+import TailwindIcon from "/Images/tailwind-svgrepo-com.svg";
+import TypeScriptIcon from "/Images/typescript-official-svgrepo-com.svg";
+import NextjsIcon from "/Images/next-dot-js-svgrepo-com.svg";
+import { useState } from "react";
+
+// import { colgroup } from "motion/react-client";
+
+const skillsIcons = {
+  React: ReactIcon,
+  Tailwind_CSS: TailwindIcon,
+  TypeScript: TypeScriptIcon,
+  Nextjs: NextjsIcon,
+};
 
 const ProjectsPage = () => {
+  const [cardSkillColor, SetCardSkillColor] = useState("");
+
   return (
     <div>
       <Header />
 
       {/* Page content */}
-      <div className="border-2 border-red-800 w-full flex justify-center items-center">
-        <div className="border-2 border-blue-800 w-full max-w-[90%]">
+      <div className=" w-full flex justify-center items-center">
+        <div className=" w-full max-w-[90%]">
           {/* First content */}
 
           <div className="w-full h-screen flex justify-between flex-col md:flex-row">
@@ -657,9 +676,139 @@ const ProjectsPage = () => {
 
           {/* Projects card  */}
 
-          <div className="border-2 border-green-700 w-full flex flex-wrap">
-            {[{ Projectname: "", desc: "" }].map((ele, idx) => {
-              return <div key={idx}>{ele.Projectname}</div>;
+          <div className="w-full flex justify-center lg:justify-between flex-wrap">
+            {[
+              {
+                image: KwikQImage,
+                projectName: "KwikQ",
+                color: "#295dff",
+                desc: "KwikQ is a smart queue management app that lets users join queues online, track their position, and get notified when it’s nearly their turn. Businesses and banks can manage queues easily through an admin dashboard, improving efficiency and customer experience.",
+                role: "Front-end lead",
+                liveLink: "https://kwik-q.vercel.app/",
+                languaguesUsed: [
+                  "React",
+                  "Styled components",
+                  "CSS",
+                  "Rest API",
+                ],
+              },
+              {
+                image: DevbyteImage,
+                projectName: "Devbyte community",
+                color: "#1a1d2e",
+                desc: "A tech community empowering developers through collaboration, open source contributions, knowledge sharing, and impactful projects (Learn, Connect, Innovate!)",
+                role: "Front-end Developer",
+                liveLink: "https://community-website-frontend-five.vercel.app/",
+                languaguesUsed: [
+                  "React",
+                  "Rest API",
+                  "Tailwind CSS",
+                  "Axios",
+                  "Material UI",
+                ],
+              },
+              {
+                image: EazytranzzImage,
+                projectName: "EazyTranz",
+                color: "#9c1260",
+                desc: "Eazytranz connects freelancers and remote workers with clients globally, ensuring swift and secure payments.",
+                role: "Front-end / Team lead",
+                liveLink: "https://eazytranzz.com/",
+                languaguesUsed: [
+                  "React",
+                  "TypeScript",
+                  "Rest API",
+                  "Tailwind CSS",
+                  "Axios",
+                  "Material UI",
+                ],
+              },
+            ].map((ele, idx) => {
+              // SetCardSkillColor(ele.color);
+              return (
+                <div
+                  key={idx}
+                  className=" w-full ssr:w-92 h-90 min-h-fit m-2 xl:m-1 2xl:m-2 bg-white shadow-lg rounded-2xl flex justify-between flex-col overflow-clip"
+                >
+                  {/* image container */}
+                  <div className="w-full h-[45%]">
+                    <img
+                      src={ele.image}
+                      alt="preview image"
+                      loading="lazy"
+                      className="w-full h-full"
+                    />
+                  </div>
+
+                  {/* name content .... */}
+                  <div className=" h-[52%] min-h-fit flex justify-center items-center">
+                    <div className=" w-full max-w-[96%] h-full">
+                      <div className=" w-full flex justify-between items-center mt-2">
+                        <h1
+                          style={{ backgroundColor: `${ele.color}` }}
+                          className={`w-fit px-4 py-2 font-bold text-lg text-white rounded-br-xl rounded-tl-xl`}
+                        >
+                          {ele.projectName}
+                        </h1>
+
+                        <p
+                          style={{ color: `${ele.color}` }}
+                          className="text-[.9rem] font-bold"
+                        >
+                          {ele.role}
+                        </p>
+                      </div>
+                      <p className="text-xs xl:text-[.85rem] my-2">
+                        {ele.desc}
+                      </p>
+
+                      <div className="flex flex-wrap">
+                        {ele.languaguesUsed?.map((ele, idx) => {
+                          return (
+                            <div
+                              style={{ backgroundColor: "" }}
+                              key={idx}
+                              className="border border-blue-950 m-1 px-2 w-fit"
+                            >
+                              {ele}
+                            </div>
+                          );
+                        })}
+                      </div>
+
+                      {/* live links */}
+                      <div className="w-full my-2">
+                        <button
+                          onClick={() => {
+                            window.open(ele.liveLink, "_blank");
+                          }}
+                          style={{ backgroundColor: `${ele.color}` }}
+                          className="relative text-white font-medium text-[17px] px-4 py-[0.35em] pl-5 h-[2.8em] rounded-[0.5em] flex items-center overflow-hidden cursor-pointer shadow-[inset_0_0_1.6em_-0.6em_#714da6] group"
+                        >
+                          <span className="mr-10">view project</span>
+                          <div className="absolute right-[0.3em] bg-white h-[2.2em] w-[2.2em] rounded-[0.7em] flex items-center justify-center transition-all duration-300 group-hover:w-[calc(100%-0.6em)] shadow-[0.1em_0.1em_0.6em_0.2em_#7b52b9] active:scale-95">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              viewBox="0 0 24 24"
+                              width="24"
+                              height="24"
+                              className="w-[1.1em] transition-transform duration-300 text-[#7b52b9] group-hover:translate-x-[0.1em]"
+                            >
+                              <path fill="none" d="M0 0h24v24H0z"></path>
+                              <path
+                                fill="currentColor"
+                                d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"
+                              ></path>
+                            </svg>
+                          </div>
+                        </button>
+                      </div>
+
+                      {/*  */}
+                    </div>
+                  </div>
+                </div>
+              );
             })}
           </div>
         </div>
