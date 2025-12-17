@@ -752,7 +752,7 @@ const ProjectsPage = () => {
                         <div className=" w-full flex justify-between items-center mt-2">
                           <h1
                             style={{ backgroundColor: `${ele.color}` }}
-                            className={`w-fit px-4 py-2 font-bold text-lg text-white rounded-br-xl rounded-tl-xl`}
+                            className={`w-fit px-4 py-2 font-bold text-xs ssr:text-sm md:text-lg text-white rounded-br-xl rounded-tl-xl`}
                           >
                             {ele.projectName}
                           </h1>

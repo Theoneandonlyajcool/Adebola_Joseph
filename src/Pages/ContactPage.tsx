@@ -258,9 +258,9 @@ const ContactPage = () => {
                   Blogs
                 </h1>
                 <p className="my-4 text-cyan-900 font-semibold xl:text-lg">
-                  I like to document some of my experiences in professional
-                  career journey as well as some technical knowledge sharing.
-                  Visit My Blogsite
+                  I document my journey as a frontend developer, sharing
+                  practical lessons, technical insights, and things I learn
+                  while building real-world web applications.
                 </p>
                 <button className="relative inline-flex items-center justify-center px-8 py-2.5 overflow-hidden tracking-tighter text-white bg-[#00072e] rounded-md group cursor-pointer mt-4">
                   <span className="absolute w-0 h-0 transition-all duration-500 ease-out bg-cyan-800 rounded-full group-hover:w-56 group-hover:h-56"></span>
@@ -805,12 +805,21 @@ const ContactPage = () => {
                   Address
                 </h1>
                 <p className="my-4 text-gray-700 font-semibold xl:text-lg">
-                  11 okeho street,Dopemu , Agege, Lagos, Nigeria
+                  {/* 11 okeho street,Dopemu , Agege, Lagos, Nigeria */}
+                  116 Iyana Isashi Rd, Ojo, Lagos, Nigeria
                 </p>
 
                 {/*  */}
 
-                <button className="relative inline-flex items-center justify-center px-8 py-2.5 overflow-hidden tracking-tighter text-white bg-[#00072e] rounded-md group cursor-pointer mt-4">
+                <button
+                  onClick={() => {
+                    window.open(
+                      "https://www.google.com/maps/search/?api=1&query=116+Iyana+Isashi+Rd,+Ojo,+Lagos,+Nigeria",
+                      "_blank"
+                    );
+                  }}
+                  className="relative inline-flex items-center justify-center px-8 py-2.5 overflow-hidden tracking-tighter text-white bg-[#00072e] rounded-md group cursor-pointer mt-4"
+                >
                   <span className="absolute w-0 h-0 transition-all duration-500 ease-out bg-cyan-800 rounded-full group-hover:w-56 group-hover:h-56"></span>
                   <span className="absolute bottom-0 left-0 h-full -ml-2">
                     <svg
