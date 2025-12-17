@@ -670,10 +670,9 @@ const ProjectsPage = () => {
                   Projects
                 </h1>
                 <p className="my-4 text-gray-700 font-semibold text-sm md:text-lg 2xl:text-xl">
-                  My projects makes use of vast variety of latest technology
-                  tools. My best experience is to create Data Science projects
-                  and deploy them to web applications using cloud
-                  infrastructure.
+                  These projects reflect my journey as a frontend developer,
+                  building scalable, responsive, and user-friendly interfaces
+                  with modern web technologies.
                 </p>
               </div>
             </div>
