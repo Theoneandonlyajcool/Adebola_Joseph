@@ -13,7 +13,7 @@ const ContactPage = () => {
         <div className="w-full max-w-[90%] ">
           {/* Contact me section */}
 
-          <Fade direction="up" duration={1000} damping={0.1} triggerOnce>
+          <Fade direction="up" duration={1500} damping={0.1} triggerOnce>
             <div className="h-screen justify-between flex mb-4 flex-col md:flex-row gap-2 md:gap-0">
               {/* image container */}
               <div className=" w-full md:max-w-[50%] h-[40%] md:h-full flex justify-center items-center">
@@ -250,7 +250,7 @@ const ContactPage = () => {
           </Fade>
 
           {/* second section */}
-          <Fade direction="up" duration={1000} damping={0.1} triggerOnce>
+          <Fade direction="up" duration={1500} damping={0.1} triggerOnce>
             <div className="w-full h-screen flex justify-between flex-col md:flex-row">
               {/* Text contnet */}
               <div className="w-full md:max-w-[50%] h-[55%] md:h-full flex flex-col justify-center text-center items-center">
@@ -583,7 +583,7 @@ const ContactPage = () => {
           </Fade>
 
           {/* Third section */}
-          <Fade direction="up" duration={1000} damping={0.1} triggerOnce>
+          <Fade direction="up" duration={1500} damping={0.1} triggerOnce>
             <div className="w-full h-screen flex justify-between flex-col md:flex-row">
               {/* Image */}
 

@@ -3,6 +3,7 @@ import KwikQImage from "/Images/KwikQ.png";
 import DevbyteImage from "/Images/Devbyte.png";
 import EazytranzzImage from "/Images/EazyTranzz.png";
 import { Fade } from "react-awesome-reveal";
+import Footer from "../Components/Footer";
 
 // import ReactIcon from "/Images/b99b508b-1c66-491c-936b-90903d129601.svg";
 // import TailwindIcon from "/Images/tailwind-svgrepo-com.svg";
@@ -820,6 +821,8 @@ const ProjectsPage = () => {
           </Fade>
         </div>
       </div>
+
+      <Footer />
     </div>
   );
 };
