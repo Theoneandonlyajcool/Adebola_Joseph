@@ -1,11 +1,11 @@
 // import { toast, ToastContainer } from "react-toastify";
-import Header from "@/Components/Header";
+import Header from "@/components/Header";
 import KwikQImage from "/Images/KwikQ.png";
 import DevbyteImage from "/Images/Devbyte.png";
 import EazytranzzImage from "/Images/EazyTranzz.png";
 // import { Fade } from "react-awesome-reveal";
-import Footer from "@/Components/Footer";
-import ProdModal from "@/Components/ProdModal";
+import Footer from "@/components/Footer";
+import ProdModal from "@/components/ProdModal";
 import { useState } from "react";
 
 // import ReactIcon from "/Images/b99b508b-1c66-491c-936b-90903d129601.svg";
