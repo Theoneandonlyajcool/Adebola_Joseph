@@ -1,5 +1,5 @@
 import Header from "../Components/Header";
-import Footer from "../Components/Footer";
+import Footer from "../components/Footer";
 import { Fade } from "react-awesome-reveal";
 
 const HomePage = () => {

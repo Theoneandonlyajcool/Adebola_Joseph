@@ -1,5 +1,5 @@
 import Header from "../Components/Header";
-import Footer from "../Components/Footer";
+import Footer from "../components/Footer";
 import { Fade } from "react-awesome-reveal";
 
 const ContactPage = () => {
@@ -210,7 +210,15 @@ const ContactPage = () => {
 
                 {/* Resume button */}
 
-                <button className="relative inline-flex items-center justify-center px-8 py-5 md:py-2.5 overflow-hidden tracking-tighter text-white bg-[#00072e] rounded-md group cursor-pointer ">
+                <button
+                  onClick={() =>
+                    window.open(
+                      "https://drive.google.com/file/d/1L6Q-BtvWKlggjkAMNJIz8m-ofvdJyMqG/view?usp=drive_link",
+                      "_blank"
+                    )
+                  }
+                  className="relative inline-flex items-center justify-center px-8 py-5 md:py-2.5 overflow-hidden tracking-tighter text-white bg-[#00072e] rounded-md group cursor-pointer "
+                >
                   <span className="absolute w-0 h-0 transition-all duration-500 ease-out bg-cyan-800 rounded-full group-hover:w-56 group-hover:h-56"></span>
                   <span className="absolute bottom-0 left-0 h-full -ml-2">
                     <svg
