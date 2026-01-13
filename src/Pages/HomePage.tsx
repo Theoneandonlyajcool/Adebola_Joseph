@@ -138,7 +138,12 @@ const HomePage = () => {
                           </div>
                         </button>
                       </div>
-                      <div className="social-button">
+                      <div
+                        onClick={() => {
+                          window.open("https://x.com/Code_Ninja1", "_blank");
+                        }}
+                        className="social-button"
+                      >
                         <button className="cursor-pointer relative w-12 h-12 rounded-full group">
                           <div className="floater w-full h-full absolute top-0 left-0 bg-black rounded-full duration-300 group-hover:-top-8 group-hover:shadow-2xl"></div>
                           <div className="icon relative z-10 w-full h-full flex items-center justify-center border-2 border-black rounded-full">
@@ -157,7 +162,7 @@ const HomePage = () => {
                           </div>
                         </button>
                       </div>
-                      <div className="social-button">
+                      {/* <div className="social-button">
                         <button className="cursor-pointer relative w-12 h-12 rounded-full group">
                           <div className="floater w-full h-full absolute top-0 left-0 bg-blue-500 rounded-full duration-300 group-hover:-top-8 group-hover:shadow-2xl"></div>
                           <div className="icon relative z-10 w-full h-full flex items-center justify-center border-2 border-blue-500 rounded-full">
@@ -175,7 +180,7 @@ const HomePage = () => {
                             </svg>
                           </div>
                         </button>
-                      </div>
+                      </div> */}
 
                       {/* Youtube */}
 
