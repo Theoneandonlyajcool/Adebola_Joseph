@@ -3,7 +3,7 @@ import { FiMenu } from "react-icons/fi";
 import { useNavigate } from "react-router-dom";
 import MobileNavModal from "./MobileNavModal";
 import { useLocation } from "react-router-dom";
-import { Fade } from "react-awesome-reveal";
+import { motion } from "motion/react";
 
 const Header = () => {
   const [openMobileNav, SetOpenMobieNav] = useState(false);
@@ -17,7 +17,11 @@ const Header = () => {
 
   const nav = useNavigate();
   return (
-    <Fade direction="down" duration={1000} damping={0.1} triggerOnce>
+    <motion.div
+      initial={{ opacity: 0, y: -100 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 1, ease: "easeOut" }}
+    >
       <div className="w-full h-[10vh] lg:h-[15vh] flex justify-center items-center">
         <div className=" w-full max-w-[90%] h-full flex justify-between items-center ss:flex-col ssr:flex-row">
           {/* Logo */}
@@ -68,8 +72,10 @@ const Header = () => {
                   <li
                     key={idx}
                     className={`cursor-pointer ${
-                      ele.activePage == ActivePage && "font-bold"
-                    } text-lg text-[#00072d] hover:bg-[#7fcbfd] p-2 w-fit transition-all ease-in-out duration-300`}
+                      ele.activePage == ActivePage
+                        ? "font-bold"
+                        : "hover:bg-[#7fcbfd]/50 rounded-br-2xl rounded-tl-2xl "
+                    } text-lg text-[#00072d] p-2 w-fit transition-all ease-in-out duration-700`}
                     onClick={() => {
                       SetActivePage(ele.activePage);
                       nav(ele.NavTo);
@@ -93,7 +99,7 @@ const Header = () => {
           </nav>
         </div>
       </div>
-    </Fade>
+    </motion.div>
   );
 };
 
