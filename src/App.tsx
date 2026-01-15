@@ -2,10 +2,8 @@ import Router from "./Routes/Router";
 
 const App = () => {
   return (
-    <div className="">
-      <p className="bg-[#edfaff]">
-        <Router />
-      </p>
+    <div className="bg-[#edfaff] overflow-x-hidden">
+      <Router />
     </div>
   );
 };

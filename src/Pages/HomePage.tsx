@@ -4,6 +4,7 @@ import Footer from "@/components/Footer";
 import { Fade } from "react-awesome-reveal";
 import Profilepic from "@/assets/images/IMG_9382.jpeg";
 import ProdModal from "@/components/ProdModal";
+import { motion } from "motion/react";
 
 const HomePage = () => {
   const [showProdModal, SetshowProdModal] = useState(false);
@@ -26,16 +27,17 @@ const HomePage = () => {
         <div className=" w-full max-w-[90%] ">
           {/* About section */}
 
-          <Fade
-            direction="up"
-            duration={1000}
-            damping={0.9}
-            triggerOnce
-            // className="z-10"
+          <div
+          // className="z-10"
           >
             <div className=" w-full min-h-fit mb-8 h-[83vh] flex flex-col md:flex-row justify-between">
               {/* Write up */}
-              <div className="w-full md:max-w-[50%] h-[45%] min-h-fit md:h-full  flex justify-center items-center">
+              <motion.div
+                initial={{ opacity: 0, x: -100 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 1, ease: "easeOut" }}
+                className="w-full md:max-w-[50%] h-[45%] min-h-fit md:h-full  flex justify-center items-center"
+              >
                 {/* Contents */}
 
                 <div>
@@ -287,10 +289,15 @@ const HomePage = () => {
                     </div>
                   </button>
                 </div>
-              </div>
+              </motion.div>
 
               {/* Image */}
-              <div className="w-full md:max-w-[50%] h-[55%] md:h-full flex justify-center items-center">
+              <motion.div
+                initial={{ opacity: 0, x: 100 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 1, ease: "easeOut" }}
+                className="w-full md:max-w-[50%] h-[55%] md:h-full flex justify-center items-center"
+              >
                 <div className="w-full rounded-4xl max-w-[80%] h-full max-h-[95%] bg-[#01072c] overflow-clip">
                   <img
                     loading="lazy"
@@ -299,9 +306,9 @@ const HomePage = () => {
                     alt=""
                   />
                 </div>
-              </div>
+              </motion.div>
             </div>
-          </Fade>
+          </div>
 
           {/* what i do section */}
 

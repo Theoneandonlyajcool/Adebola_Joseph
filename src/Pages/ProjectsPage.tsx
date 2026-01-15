@@ -7,6 +7,7 @@ import EazytranzzImage from "/Images/EazyTranzz.png";
 import Footer from "@/components/Footer";
 import ProdModal from "@/components/ProdModal";
 import { useState } from "react";
+import { motion } from "motion/react";
 
 // import ReactIcon from "/Images/b99b508b-1c66-491c-936b-90903d129601.svg";
 // import TailwindIcon from "/Images/tailwind-svgrepo-com.svg";
@@ -49,7 +50,12 @@ const ProjectsPage = () => {
           {/* <Fade direction="up" duration={1500} damping={0.1} triggerOnce> */}
           <div className="w-full h-screen flex justify-between flex-col md:flex-row">
             {/* Image container */}
-            <div className="w-full md:max-w-[50%] h-[50%] md:h-full flex flex-col justify-center text-center items-center">
+            <motion.div
+              initial={{ opacity: 0, x: -100 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 1, ease: "easeOut" }}
+              className="w-full md:max-w-[50%] h-[50%] md:h-full flex flex-col justify-center text-center items-center"
+            >
               <svg
                 id="a6dc9487-50e2-4fb9-af91-bf1b7118d463"
                 data-name="Layer 1"
@@ -675,11 +681,16 @@ const ProjectsPage = () => {
                   opacity="0.1"
                 ></path>
               </svg>
-            </div>
+            </motion.div>
 
             {/* content */}
 
-            <div className="w-full md:max-w-[50%] h-[50%] md:h-full flex flex-col justify-center text-center items-center">
+            <motion.div
+              initial={{ opacity: 0, x: 100 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 1, ease: "easeOut" }}
+              className="w-full md:max-w-[50%] h-[50%] md:h-full flex flex-col justify-center text-center items-center"
+            >
               <h1 className="text-2xl md:text-4xl 2xl:text-6xl font-bold text-[#00072d]">
                 Projects
               </h1>
@@ -688,7 +699,7 @@ const ProjectsPage = () => {
                 building scalable, responsive, and user-friendly interfaces with
                 modern web technologies.
               </p>
-            </div>
+            </motion.div>
           </div>
           {/* </Fade> */}
           {/*  */}

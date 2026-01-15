@@ -1,11 +1,23 @@
+import { useState } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { Fade } from "react-awesome-reveal";
+import { motion } from "motion/react";
+import ProdModal from "@/components/ProdModal";
 
 const ContactPage = () => {
+  const [showProdModal, SetshowProdModal] = useState(false);
+
   return (
     <div>
       <Header />
+
+      {showProdModal && (
+        <ProdModal
+          link={"https://www.linkedin.com/in/adebola-joseph-363910370"}
+          text="My linkedIn profile is currently under suspension."
+          closeModal={() => SetshowProdModal(false)}
+        />
+      )}
 
       {/* contact page */}
       <div className="flex justify-center items-center">
@@ -13,20 +25,30 @@ const ContactPage = () => {
         <div className="w-full max-w-[90%] ">
           {/* Contact me section */}
 
-          <Fade direction="up" duration={1500} damping={0.1} triggerOnce>
+          <div>
             <div className="h-screen justify-between flex mb-4 flex-col md:flex-row gap-2 md:gap-0">
               {/* image container */}
-              <div className=" w-full md:max-w-[50%] h-[40%] md:h-full flex justify-center items-center">
+              <motion.div
+                initial={{ opacity: 0, x: -100 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 1, ease: "easeOut" }}
+                className=" w-full md:max-w-[50%] h-[40%] md:h-full flex justify-center items-center"
+              >
                 <img
                   src="/Images/profile_resized-removebg-preview.png"
                   className="w-[65%] h-[65%] md:w-80 md:h-80 2xl:w-120 2xl:h-120 bg-[#00072e] border-3 border-cyan-700 rounded-full object-contain"
                   alt=""
                   loading="lazy"
                 />
-              </div>
+              </motion.div>
 
               {/* contact info */}
-              <div className=" w-full md:max-w-[50%] h-[55%] md:h-full flex flex-col justify-center text-center items-center">
+              <motion.div
+                initial={{ opacity: 0, x: 100 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 1, ease: "easeOut" }}
+                className=" w-full md:max-w-[50%] h-[55%] md:h-full flex flex-col justify-center text-center items-center"
+              >
                 <h1 className="font-bold text-2xl md:text-3xl xl:text-5xl text-[#00072e] mb-8">
                   Contact Me
                 </h1>
@@ -40,7 +62,7 @@ const ContactPage = () => {
 
                 <div className="my-4">
                   {/* Second batch */}
-                  <div className="flex justify-center lg:justify-start items-center gap-4 flex-wrap">
+                  <div className="flex items-center gap-4 flex-wrap">
                     <div className="social-button">
                       <button
                         className="cursor-pointer relative w-12 h-12 rounded-full group"
@@ -68,7 +90,10 @@ const ContactPage = () => {
                         </div>
                       </button>
                     </div>
-                    <div className="social-button ">
+                    <div
+                      onClick={() => SetshowProdModal(true)}
+                      className="social-button "
+                    >
                       <button className="cursor-pointer relative w-12 h-12 rounded-full group">
                         <div className="floater w-full h-full absolute top-0 left-0 bg-blue-500 rounded-full duration-300 group-hover:-top-8 group-hover:shadow-2xl"></div>
                         <div className="icon relative z-10 w-full h-full flex items-center justify-center border-2 border-blue-500 rounded-full">
@@ -87,7 +112,10 @@ const ContactPage = () => {
                         </div>
                       </button>
                     </div>
-                    <div className="social-button">
+                    <a
+                      href="mailto:adebolajoseph801@gmail.com"
+                      className="social-button"
+                    >
                       <button className="cursor-pointer relative w-12 h-12 rounded-full group">
                         <div className="floater w-full h-full absolute top-0 left-0 bg-red-400 rounded-full duration-300 group-hover:-top-8 group-hover:shadow-2xl"></div>
                         <div className="icon relative z-10 w-full h-full flex items-center justify-center border-2 border-red-400 rounded-full">
@@ -105,9 +133,17 @@ const ContactPage = () => {
                           </svg>
                         </div>
                       </button>
-                    </div>
+                    </a>
 
-                    <div className="social-button">
+                    <div
+                      onClick={() =>
+                        window.open(
+                          "https://www.instagram.com/ajcool347/",
+                          "_blank"
+                        )
+                      }
+                      className="social-button"
+                    >
                       <button className="cursor-pointer relative w-12 h-12 rounded-full group">
                         <div className="floater w-full h-full absolute top-0 left-0 bg-linear-to-b from-yellow-400 via-orange-500 to-pink-600 rounded-full duration-300 group-hover:-top-8 group-hover:shadow-2xl"></div>
                         <div
@@ -134,7 +170,12 @@ const ContactPage = () => {
                         </div>
                       </button>
                     </div>
-                    <div className="social-button">
+                    <div
+                      onClick={() => {
+                        window.open("https://x.com/Code_Ninja1", "_blank");
+                      }}
+                      className="social-button"
+                    >
                       <button className="cursor-pointer relative w-12 h-12 rounded-full group">
                         <div className="floater w-full h-full absolute top-0 left-0 bg-black rounded-full duration-300 group-hover:-top-8 group-hover:shadow-2xl"></div>
                         <div className="icon relative z-10 w-full h-full flex items-center justify-center border-2 border-black rounded-full">
@@ -153,25 +194,25 @@ const ContactPage = () => {
                         </div>
                       </button>
                     </div>
-                    <div className="social-button">
-                      <button className="cursor-pointer relative w-12 h-12 rounded-full group">
-                        <div className="floater w-full h-full absolute top-0 left-0 bg-blue-500 rounded-full duration-300 group-hover:-top-8 group-hover:shadow-2xl"></div>
-                        <div className="icon relative z-10 w-full h-full flex items-center justify-center border-2 border-blue-500 rounded-full">
-                          <svg
-                            fill="none"
-                            viewBox="0 0 13 22"
-                            height="22"
-                            width="13"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              d="M7.71289 22H4.1898C3.60134 22 3.12262 21.5213 3.12262 20.9328V12.9863H1.06717C0.478672 12.9863 0 12.5074 0 11.9191V8.514C0 7.9255 0.478672 7.44683 1.06717 7.44683H3.12262V5.74166C3.12262 4.05092 3.6535 2.6125 4.65773 1.58207C5.6665 0.546992 7.07627 0 8.7346 0L11.4214 0.00438281C12.0089 0.00537109 12.4868 0.484086 12.4868 1.07151V4.23311C12.4868 4.82157 12.0083 5.30028 11.4199 5.30028L9.61091 5.30093C9.05919 5.30093 8.91868 5.41153 8.88864 5.44543C8.83914 5.50172 8.78023 5.66062 8.78023 6.09954V7.4467H11.284C11.4725 7.4467 11.6551 7.49319 11.812 7.58076C12.1506 7.76995 12.3611 8.12762 12.3611 8.51417L12.3597 11.9193C12.3597 12.5074 11.881 12.9861 11.2926 12.9861H8.78019V20.9328C8.78023 21.5213 8.30139 22 7.71289 22ZM4.41233 20.7103H7.49031V12.4089C7.49031 12.016 7.81009 11.6964 8.20282 11.6964H11.07L11.0712 8.73662H8.20265C7.80991 8.73662 7.49031 8.41706 7.49031 8.02411V6.09959C7.49031 5.59573 7.54153 5.0227 7.92185 4.59198C8.38144 4.07133 9.10568 4.01126 9.61056 4.01126L11.1971 4.01057V1.29375L8.73357 1.28975C6.06848 1.28975 4.41238 2.99574 4.41238 5.7417V8.02407C4.41238 8.4168 4.09277 8.73658 3.7 8.73658H1.28975V11.6964H3.7C4.09277 11.6964 4.41238 12.016 4.41238 12.4089L4.41233 20.7103Z"
-                              className="group-hover:fill-[#171543] fill-white duration-300"
-                            ></path>
-                          </svg>
-                        </div>
-                      </button>
-                    </div>
+                    {/* <div className="social-button">
+                        <button className="cursor-pointer relative w-12 h-12 rounded-full group">
+                          <div className="floater w-full h-full absolute top-0 left-0 bg-blue-500 rounded-full duration-300 group-hover:-top-8 group-hover:shadow-2xl"></div>
+                          <div className="icon relative z-10 w-full h-full flex items-center justify-center border-2 border-blue-500 rounded-full">
+                            <svg
+                              fill="none"
+                              viewBox="0 0 13 22"
+                              height="22"
+                              width="13"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                d="M7.71289 22H4.1898C3.60134 22 3.12262 21.5213 3.12262 20.9328V12.9863H1.06717C0.478672 12.9863 0 12.5074 0 11.9191V8.514C0 7.9255 0.478672 7.44683 1.06717 7.44683H3.12262V5.74166C3.12262 4.05092 3.6535 2.6125 4.65773 1.58207C5.6665 0.546992 7.07627 0 8.7346 0L11.4214 0.00438281C12.0089 0.00537109 12.4868 0.484086 12.4868 1.07151V4.23311C12.4868 4.82157 12.0083 5.30028 11.4199 5.30028L9.61091 5.30093C9.05919 5.30093 8.91868 5.41153 8.88864 5.44543C8.83914 5.50172 8.78023 5.66062 8.78023 6.09954V7.4467H11.284C11.4725 7.4467 11.6551 7.49319 11.812 7.58076C12.1506 7.76995 12.3611 8.12762 12.3611 8.51417L12.3597 11.9193C12.3597 12.5074 11.881 12.9861 11.2926 12.9861H8.78019V20.9328C8.78023 21.5213 8.30139 22 7.71289 22ZM4.41233 20.7103H7.49031V12.4089C7.49031 12.016 7.81009 11.6964 8.20282 11.6964H11.07L11.0712 8.73662H8.20265C7.80991 8.73662 7.49031 8.41706 7.49031 8.02411V6.09959C7.49031 5.59573 7.54153 5.0227 7.92185 4.59198C8.38144 4.07133 9.10568 4.01126 9.61056 4.01126L11.1971 4.01057V1.29375L8.73357 1.28975C6.06848 1.28975 4.41238 2.99574 4.41238 5.7417V8.02407C4.41238 8.4168 4.09277 8.73658 3.7 8.73658H1.28975V11.6964H3.7C4.09277 11.6964 4.41238 12.016 4.41238 12.4089L4.41233 20.7103Z"
+                                className="group-hover:fill-[#171543] fill-white duration-300"
+                              ></path>
+                            </svg>
+                          </div>
+                        </button>
+                      </div> */}
 
                     {/* Youtube */}
 
@@ -253,15 +294,21 @@ const ContactPage = () => {
                     See My Resume
                   </span>
                 </button>
-              </div>
+              </motion.div>
             </div>
-          </Fade>
+          </div>
 
           {/* second section */}
-          <Fade direction="up" duration={1500} damping={0.1} triggerOnce>
+          <div>
             <div className="w-full h-screen flex justify-between flex-col md:flex-row">
               {/* Text contnet */}
-              <div className="w-full md:max-w-[50%] h-[55%] md:h-full flex flex-col justify-center text-center items-center">
+              <motion.div
+                initial={{ opacity: 0, x: -100 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 1, ease: "easeOut" }}
+                viewport={{ once: true, amount: 0.3 }}
+                className="w-full md:max-w-[50%] h-[55%] md:h-full flex flex-col justify-center text-center items-center"
+              >
                 <h1 className="text-2xl md:text-4xl 2xl:text-6xl font-bold">
                   Blogs
                 </h1>
@@ -305,10 +352,16 @@ const ContactPage = () => {
                     Visit My BlogSite
                   </span>
                 </button>
-              </div>
+              </motion.div>
 
               {/* image conatiner */}
-              <div className="w-full md:max-w-[50%] h-[55%] md:h-full flex flex-col justify-center text-center items-center">
+              <motion.div
+                initial={{ opacity: 0, x: 100 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 1, ease: "easeOut" }}
+                viewport={{ once: true, amount: 0.3 }}
+                className="w-full md:max-w-[50%] h-[55%] md:h-full flex flex-col justify-center text-center items-center"
+              >
                 <svg
                   className="w-full h-full"
                   id="b4ce20e6-8fe7-43d5-87f7-68602c562594"
@@ -586,16 +639,22 @@ const ContactPage = () => {
                     opacity="0.2"
                   ></path>
                 </svg>
-              </div>
+              </motion.div>
             </div>
-          </Fade>
+          </div>
 
           {/* Third section */}
-          <Fade direction="up" duration={1500} damping={0.1} triggerOnce>
+          <div>
             <div className="w-full h-screen flex justify-between flex-col md:flex-row">
               {/* Image */}
 
-              <div className="w-full md:max-w-[50%] h-[55%] md:h-full flex flex-col justify-center text-center items-center">
+              <motion.div
+                initial={{ opacity: 0, x: -100 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 1, ease: "easeOut" }}
+                viewport={{ once: true, amount: 0.3 }}
+                className="w-full md:max-w-[50%] h-[55%] md:h-full flex flex-col justify-center text-center items-center"
+              >
                 <svg
                   className="w-full h-full"
                   id="aaafdec0-95c8-49a3-a8f8-64216c6da511"
@@ -805,10 +864,16 @@ const ContactPage = () => {
                     fill="#57b894"
                   ></path>
                 </svg>
-              </div>
+              </motion.div>
 
               {/* Text content */}
-              <div className="w-full md:max-w-[50%] h-[55%] md:h-full flex flex-col justify-start text-center items-center">
+              <motion.div
+                initial={{ opacity: 0, x: 100 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 1, ease: "easeOut" }}
+                viewport={{ once: true, amount: 0.3 }}
+                className="w-full md:max-w-[50%] h-[55%] md:h-full flex flex-col justify-center text-center items-center"
+              >
                 <h1 className="text-2xl md:text-4xl 2xl:text-6xl font-bold text-cyan-900">
                   Address
                 </h1>
@@ -862,9 +927,9 @@ const ContactPage = () => {
                     Visit on Google Maps
                   </span>
                 </button>
-              </div>
+              </motion.div>
             </div>
-          </Fade>
+          </div>
 
           {/*  */}
         </div>
