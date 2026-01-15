@@ -2,6 +2,7 @@ import { useState } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Timeline } from "@/components/TimeLine";
+import { motion } from "motion/react";
 
 const ExperiencePage = () => {
   const [openWorks, setOpenWorks] = useState(false);
@@ -57,7 +58,12 @@ const ExperiencePage = () => {
 
           <div className="h-[83.5vh] w-full flex flex-col lg:flex-row">
             {/* Image container */}
-            <div className="w-full lg:max-w-[50%] h-full">
+            <motion.div
+              initial={{ opacity: 0, x: -100 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 1, ease: "easeOut" }}
+              className="w-full lg:max-w-[50%] h-full"
+            >
               <svg
                 id="bf56719a-dd30-4b09-833f-7c41eeee086b"
                 data-name="Layer 1"
@@ -457,9 +463,14 @@ const ExperiencePage = () => {
                   opacity="0.1"
                 ></path>
               </svg>
-            </div>
+            </motion.div>
 
-            <div className="text-center w-full lg:max-w-[50%] h-full flex flex-col justify-center items-center">
+            <motion.div
+              initial={{ opacity: 0, x: 100 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 1, ease: "easeOut" }}
+              className="text-center w-full lg:max-w-[50%] h-full flex flex-col justify-center items-center"
+            >
               <h1 className="text-[#011c54] font-bold text-2xl md:text-4xl xl:text-5xl 2xl:text-6xl mb-6">
                 Experience
               </h1>
@@ -476,14 +487,19 @@ const ExperiencePage = () => {
                 continuously improving my skills through real-world projects and
                 collaboration.
               </p>
-            </div>
+            </motion.div>
           </div>
 
           {/* Sectond section */}
 
           <div className="w-full  mx-auto mt-10">
             {/* Works */}
-            <div className="hover:text-gray-500 my-4">
+            <motion.div
+              initial={{ opacity: 0, x: -100 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 1, ease: "easeOut" }}
+              className="hover:text-gray-500 my-4"
+            >
               {/* Header */}
               <button
                 onClick={() => setOpenWorks(!openWorks)}
@@ -517,10 +533,15 @@ const ExperiencePage = () => {
                   ))
                 )}
               </div>
-            </div>
+            </motion.div>
 
             {/* Internships */}
-            <div className="hover:text-gray-500">
+            <motion.div
+              initial={{ opacity: 0, x: 100 }}
+              animate={{ opacity: 0.8, x: 0 }}
+              transition={{ duration: 1, ease: "easeOut" }}
+              className="hover:text-gray-500"
+            >
               {/* Header */}
               <button
                 onClick={() => setOpenInternships(!openInternships)}
@@ -549,10 +570,15 @@ const ExperiencePage = () => {
                 ))}
                 {/* <Timeline /> */}
               </div>
-            </div>
+            </motion.div>
 
             {/* Volunteership */}
-            <div className="hover:text-gray-500 my-4">
+            <motion.div
+              initial={{ opacity: 0, x: -100 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6, ease: "easeOut" }}
+              className="hover:text-gray-500 my-4"
+            >
               {/* Header */}
               <button
                 onClick={() => setOpenVolunteership(!openVolunteership)}
@@ -582,7 +608,7 @@ const ExperiencePage = () => {
 
                 {/* <Timeline /> */}
               </div>
-            </div>
+            </motion.div>
           </div>
         </div>
       </div>

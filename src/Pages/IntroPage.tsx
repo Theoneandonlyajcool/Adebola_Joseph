@@ -10,15 +10,7 @@ const IntroPage = () => {
   const [isDeleting, setIsDeleting] = useState(false);
   const [textArrayIndex, setTextArrayIndex] = useState(0);
 
-  // Array of texts to cycle through
-  const textsToType = [
-    // "Welcome to our website!",
-    // "We create amazing experiences.",
-    // "Built with React and Tailwind CSS.",
-    // "Enjoy the typewriter effect!",
-    "I am Adebola Joseph",
-    // "I am a Frontend developer",
-  ];
+  const textsToType = ["Adebola Joseph"];
 
   const typingSpeed = 100;
   const deletingSpeed = 50;
@@ -35,19 +27,16 @@ const IntroPage = () => {
             setDisplayText(currentText.substring(0, currentIndex + 1));
             setCurrentIndex(currentIndex + 1);
           } else {
-            // Finished typing, pause then start deleting
             setTimeout(() => {
               // setIsDeleting(true);
               nav("home");
             }, pauseTime);
           }
         } else {
-          // Deleting
           if (currentIndex > 0) {
             setDisplayText(currentText.substring(0, currentIndex - 1));
             setCurrentIndex(currentIndex - 1);
           } else {
-            // Finished deleting, move to next text
             setIsDeleting(false);
             setTextArrayIndex((textArrayIndex + 1) % textsToType.length);
           }
@@ -74,7 +63,7 @@ const IntroPage = () => {
           duration: 0.5,
           //   scale: { type: "spring", visualDuration: 0.4 },
         }}
-        className="w-full h-screen bg-[#00072e]"
+        className="w-full h-screen bg-linear-to-br from-[#00072e] to-[#30396a]"
       >
         <div className=" flex flex-col justify-center items-center h-full">
           <motion.div
@@ -94,9 +83,8 @@ const IntroPage = () => {
             />
           </motion.div>
 
-          <p className=" text-4xl md:text-3xl xl:text-5xl  text-g font-Dancing text-cyan-100">
+          <p className=" text-4xl md:text-3xl xl:text-5xl  text-g font-Dancing text-white">
             {displayText}
-            <span className="animate-pulse">|</span>
           </p>
         </div>
       </motion.div>
