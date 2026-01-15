@@ -34,7 +34,11 @@ const ProjectsPage = () => {
       {/* <ToastContainer /> */}
 
       {showProdModal && (
-        <ProdModal link={prodLink} closeModal={() => SetshowProdModal(false)} />
+        <ProdModal
+          link={prodLink}
+          text="This project is currently under production as changes haven't been deployed yet."
+          closeModal={() => SetshowProdModal(false)}
+        />
       )}
 
       {/* Page content */}
