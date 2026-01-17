@@ -36,7 +36,7 @@ const ContactPage = () => {
               >
                 <img
                   src="/Images/profile_resized-removebg-preview.png"
-                  className="w-[65%] h-[65%] md:w-80 md:h-80 2xl:w-120 2xl:h-120 bg-[#00072e] border-3 border-cyan-700 rounded-full object-contain"
+                  className="w-[85%] h-[85%] md:w-80 md:h-80 2xl:w-120 2xl:h-120 bg-[#00072e] border-3 border-cyan-700 rounded-full object-contain"
                   alt=""
                   loading="lazy"
                 />
@@ -47,7 +47,7 @@ const ContactPage = () => {
                 initial={{ opacity: 0, x: 100 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 1, ease: "easeOut" }}
-                className=" w-full md:max-w-[50%] h-[55%] md:h-full flex flex-col justify-center text-center items-center"
+                className=" w-full md:max-w-[50%] h-[60%] md:h-full flex flex-col justify-center text-center items-center"
               >
                 <h1 className="font-bold text-2xl md:text-3xl xl:text-5xl text-[#00072e] mb-8">
                   Contact Me
@@ -62,7 +62,7 @@ const ContactPage = () => {
 
                 <div className="my-4">
                   {/* Second batch */}
-                  <div className="flex items-center gap-4 flex-wrap">
+                  <div className="flex items-center justify-center gap-4 flex-wrap">
                     <div className="social-button">
                       <button
                         className="cursor-pointer relative w-12 h-12 rounded-full group"
@@ -139,7 +139,7 @@ const ContactPage = () => {
                       onClick={() =>
                         window.open(
                           "https://www.instagram.com/ajcool347/",
-                          "_blank"
+                          "_blank",
                         )
                       }
                       className="social-button"
@@ -255,7 +255,7 @@ const ContactPage = () => {
                   onClick={() =>
                     window.open(
                       "https://drive.google.com/file/d/1L6Q-BtvWKlggjkAMNJIz8m-ofvdJyMqG/view?usp=drive_link",
-                      "_blank"
+                      "_blank",
                     )
                   }
                   className="relative inline-flex items-center justify-center px-8 py-5 md:py-2.5 overflow-hidden tracking-tighter text-white bg-[#00072e] rounded-md group cursor-pointer "
@@ -888,7 +888,7 @@ const ContactPage = () => {
                   onClick={() => {
                     window.open(
                       "https://www.google.com/maps/search/?api=1&query=116+Iyana+Isashi+Rd,+Ojo,+Lagos,+Nigeria",
-                      "_blank"
+                      "_blank",
                     );
                   }}
                   className="relative inline-flex items-center justify-center px-8 py-2.5 overflow-hidden tracking-tighter text-white bg-[#00072e] rounded-md group cursor-pointer mt-4"

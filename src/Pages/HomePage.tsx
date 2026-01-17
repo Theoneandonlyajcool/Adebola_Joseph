@@ -40,14 +40,14 @@ const HomePage = () => {
               >
                 {/* Contents */}
 
-                <div>
+                <div className="flex flex-col justify-center items-center text-center">
                   {/* Texts */}
                   <div>
-                    <h1 className="text-[#020c45] mb-4 font-bold text-3xl md:text-5xl">
+                    <h1 className="text-[#020c45] mb-4 font-bold text-3xl md:text-5xl xl:text-6xl">
                       Adebola Joseph
                     </h1>
                     {/* <p className="font-bold text-[#020c45]">{"( Aj_Cool )"}</p> */}
-                    <p className="font-semibold text-gray-500">
+                    <p className="font-semibold text-gray-500 xl:text-xl 2xl:text-2xl">
                       A passionate individual who always thrives to work on end
                       to end products which develop sustainable and scalable
                       social and technical systems to create impact.
@@ -58,7 +58,7 @@ const HomePage = () => {
 
                   <div className="my-4">
                     {/* Second batch */}
-                    <div className="flex items-center gap-4 flex-wrap">
+                    <div className="flex items-center justify-center gap-4 flex-wrap">
                       <div className="social-button">
                         <button
                           className="cursor-pointer relative w-12 h-12 rounded-full group"
@@ -136,7 +136,7 @@ const HomePage = () => {
                         onClick={() =>
                           window.open(
                             "https://www.instagram.com/ajcool347/",
-                            "_blank"
+                            "_blank",
                           )
                         }
                         className="social-button"
