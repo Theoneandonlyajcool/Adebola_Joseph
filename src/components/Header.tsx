@@ -42,11 +42,11 @@ const Header = () => {
                   NavTo: "/home",
                   activePage: "/home",
                 },
-                {
-                  onPage: "Education",
-                  NavTo: "/education",
-                  activePage: "/education",
-                },
+                // {
+                //   onPage: "Education",
+                //   NavTo: "/education",
+                //   activePage: "/education",
+                // },
                 {
                   onPage: "Experience",
                   NavTo: "/experience",
