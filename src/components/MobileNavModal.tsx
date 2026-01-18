@@ -45,7 +45,7 @@ const MobileNavModal = ({ closeModal }: MobileNavprops) => {
           <div className="relative  w-full h-[8vh] flex justify-end items-center">
             <FaXmark
               onClick={() => closeModal(false)}
-              className="text-3xl text-gray-700 cursor-pointer"
+              className="text-3xl text-gray-700 mr-4 cursor-pointer"
             />
           </div>
 
