@@ -3,6 +3,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { motion } from "motion/react";
 import ProdModal from "@/components/ProdModal";
+import { ToastContainer, toast } from "react-toastify";
 
 const ContactPage = () => {
   const [showProdModal, SetshowProdModal] = useState(false);
@@ -10,6 +11,7 @@ const ContactPage = () => {
   return (
     <div>
       <Header />
+      <ToastContainer />
 
       {showProdModal && (
         <ProdModal
@@ -317,7 +319,10 @@ const ContactPage = () => {
                   practical lessons, technical insights, and things I learn
                   while building real-world web applications.
                 </p>
-                <button className="relative inline-flex items-center justify-center px-8 py-2.5 overflow-hidden tracking-tighter text-white bg-[#00072e] rounded-md group cursor-pointer mt-4">
+                <button
+                  onClick={() => toast.error("An error occured")}
+                  className="relative inline-flex items-center justify-center px-8 py-2.5 overflow-hidden tracking-tighter text-white bg-[#00072e] rounded-md group cursor-pointer mt-4"
+                >
                   <span className="absolute w-0 h-0 transition-all duration-500 ease-out bg-cyan-800 rounded-full group-hover:w-56 group-hover:h-56"></span>
                   <span className="absolute bottom-0 left-0 h-full -ml-2">
                     <svg

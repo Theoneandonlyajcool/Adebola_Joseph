@@ -10,9 +10,9 @@ const Typewriter = ({ text }: TextType) => {
   const [charIndex, setCharIndex] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
 
-  const TYPING_SPEED = 150;
+  const TYPING_SPEED = 200;
   const DELETING_SPEED = 75;
-  const PAUSE_DURATION = 1500;
+  const PAUSE_DURATION = 2000;
 
   // --- DERIVED STATE ---
   // The text being displayed is calculated from the current state values (textIndex and charIndex)

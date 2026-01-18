@@ -7,21 +7,25 @@ import ProjectsPage from "../Pages/ProjectsPage";
 import OpenSource from "../Pages/OpenSource";
 import ContactPage from "../Pages/ContactPage";
 import PageNotFound from "../Pages/PageNotFound";
+import ScrollToTop from "@/components/ScrollToTop";
 
 const Router = () => {
   return (
-    <HashRouter>
-      <Routes>
-        <Route path="/" element={<IntroPage />} />
-        <Route path="*" element={<PageNotFound />} />
-        <Route path="/home" element={<HomePage />} />
-        <Route path="/education" element={<EducationPage />} />
-        <Route path="/experience" element={<ExperiencePage />} />
-        <Route path="/projects" element={<ProjectsPage />} />
-        <Route path="/opensource" element={<OpenSource />} />
-        <Route path="/contact" element={<ContactPage />} />
-      </Routes>
-    </HashRouter>
+    <div>
+      <ScrollToTop />
+      <HashRouter>
+        <Routes>
+          <Route path="/" element={<IntroPage />} />
+          <Route path="*" element={<PageNotFound />} />
+          <Route path="/home" element={<HomePage />} />
+          <Route path="/education" element={<EducationPage />} />
+          <Route path="/experience" element={<ExperiencePage />} />
+          <Route path="/projects" element={<ProjectsPage />} />
+          <Route path="/opensource" element={<OpenSource />} />
+          <Route path="/contact" element={<ContactPage />} />
+        </Routes>
+      </HashRouter>
+    </div>
   );
 };
 

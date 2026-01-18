@@ -298,7 +298,7 @@ const HomePage = () => {
                 transition={{ duration: 1, ease: "easeOut" }}
                 className="w-full md:max-w-[50%] h-[55%] md:h-full flex justify-center items-center"
               >
-                <div className="w-full rounded-4xl max-w-[80%] h-full max-h-[95%] bg-[#01072c] overflow-clip">
+                <div className="w-full rounded-4xl md:max-w-[80%] h-full max-h-[95%] bg-[#01072c] overflow-clip">
                   <img
                     loading="lazy"
                     src={Profilepic}
