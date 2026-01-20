@@ -256,7 +256,7 @@ const ContactPage = () => {
                 <button
                   onClick={() =>
                     window.open(
-                      "https://drive.google.com/file/d/1L6Q-BtvWKlggjkAMNJIz8m-ofvdJyMqG/view?usp=drive_link",
+                      "https://drive.google.com/file/d/1XqVRscRJUyIWhNQjak44OxjPl6z75sc8/view?usp=drive_link",
                       "_blank",
                     )
                   }
