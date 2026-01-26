@@ -634,11 +634,11 @@ const HomePage = () => {
                     {[
                       {
                         path: "/Images/3973c796-c272-48a9-b6d8-d4d18e755e52.svg",
-                        logoName: "HTML5",
+                        logoName: "HTML",
                       },
                       {
                         path: "/Images/e4a94a00-ea90-4cc9-9109-e127d5471b86.svg",
-                        logoName: "CSS3",
+                        logoName: "CSS",
                       },
                       {
                         path: "/Images/892323d7-04cf-4a31-9e97-f88bbbfa8fba.svg",
@@ -700,15 +700,19 @@ const HomePage = () => {
                         // Third option
 
                         <div className="group relative m-4" key={idx}>
-                          <button>
+                          <button className="flex flex-col items-center cursor-pointer">
                             <img
                               src={ele.path}
-                              className="w-8 xl:w-10 h-8 xl:h-10 hover:scale-125 duration-200 hover:stroke-blue-500 cursor-pointer"
+                              className="w-8 xl:w-10 h-8 xl:h-10 hover:scale-125 duration-200 hover:stroke-blue-500 "
                               alt=""
                             />
+
+                            <p className="my-2 text-md font-bold text-[#0a2472]">
+                              {ele.logoName}
+                            </p>
                           </button>
                           <span
-                            className="absolute -top-14 left-[50%] -translate-x-[50%] 
+                            className="whitespace-nowrap absolute -top-14 left-[50%] -translate-x-[50%] 
   z-20 origin-left scale-0 px-3 rounded-lg border-2 
   border-blue-400 bg-[#00072e] text-white py-2 text-sm font-bold
   shadow-md transition-all duration-300 ease-in-out 

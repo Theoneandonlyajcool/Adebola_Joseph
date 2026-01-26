@@ -12,7 +12,7 @@ const IntroPage = () => {
 
   const textsToType = ["Adebola Joseph"];
 
-  const typingSpeed = 100;
+  const typingSpeed = 150;
   const deletingSpeed = 50;
   const pauseTime = 1500;
 
@@ -42,7 +42,7 @@ const IntroPage = () => {
           }
         }
       },
-      isDeleting ? deletingSpeed : typingSpeed
+      isDeleting ? deletingSpeed : typingSpeed,
     );
 
     return () => clearTimeout(timer);
@@ -83,7 +83,7 @@ const IntroPage = () => {
             />
           </motion.div>
 
-          <p className=" text-4xl md:text-3xl xl:text-5xl  text-g font-Dancing text-white">
+          <p className=" text-4xl md:text-3xl xl:text-5xl  text-g font-Dancing text-white transition-all duration-1000 ease-in-out">
             {displayText}
           </p>
         </div>
