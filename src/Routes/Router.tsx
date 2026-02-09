@@ -8,12 +8,15 @@ import OpenSource from "../Pages/OpenSource";
 import ContactPage from "../Pages/ContactPage";
 import PageNotFound from "../Pages/PageNotFound";
 import ScrollToTop from "@/components/ScrollToTop";
+import { Analytics } from "@vercel/analytics/react";
 
 const Router = () => {
   return (
     <div>
       <ScrollToTop />
+
       <HashRouter>
+        <Analytics />
         <Routes>
           <Route path="/" element={<IntroPage />} />
           <Route path="*" element={<PageNotFound />} />
