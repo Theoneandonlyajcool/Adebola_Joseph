@@ -746,7 +746,7 @@ const ProjectsPage = () => {
                 color: "#9c1260",
                 desc: "Eazytranz connects freelancers and remote workers with clients globally, ensuring swift and secure payments.",
                 role: "Front-end / Team lead",
-                liveLink: "https://eazytranzz.com/",
+                liveLink: "https://eazytranz.com/",
                 languaguesUsed: [
                   "React",
                   "TypeScript",
