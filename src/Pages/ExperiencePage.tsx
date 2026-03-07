@@ -21,6 +21,14 @@ const ExperiencePage = () => {
   const internshipExp = [
     {
       role: "Frontend Developer Intern",
+      company: "Oko AI",
+      location: "Remote",
+      date: "January 2026 – present",
+      description:
+        "IMPROVED and added new FEATURES to an existing Next.js, TypeScript, and Tailwind CSS codebase, collaborating closely with backend and UI/UX teams to ship new features and deliver a smooth user experience. Improved performance through lazy loading, code splitting, and efficient data memoization to reduce unnecessary backend requests and speed up the application.",
+    },
+    {
+      role: "Frontend Developer Intern",
       company: "Enovelab institute",
       location: "Remote",
       date: "october 2025 – December 2025",
@@ -30,6 +38,24 @@ const ExperiencePage = () => {
   ];
 
   const volunteershipExp = [
+    {
+      role: "Engineering Team Lead (Volunteer)",
+      company: "Center for Low-Resource Languages & Cultures (CLRLC)",
+      location: "Remote",
+      date: "March 2026 – Present ",
+      description:
+        "Led the engineering team in building community-driven technology initiatives focused on democratizing Artificial Intelligence for low-resource languages. – Coordinated development tasks, guided contributors, and ensured frontend implementations followed modern best practices.",
+    },
+
+    {
+      role: "Frontend Developer (Volunteer)",
+      company: "Center for Low-Resource Languages & Cultures (CLRLC)",
+      location: "Remote",
+      date: "January 2026 – Present ",
+      description:
+        "Contribute to community-driven technology initiatives focused on democratizing Artificial Intelligence for low-resource languages. – Build and maintain responsive frontend interfaces while collaborating with a global network of developers, researchers, and contributors.",
+    },
+
     {
       role: "Frontend Developer (Volunteer)",
       company: "Devbyte Community",
