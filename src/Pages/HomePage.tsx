@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Header from "@/components/Header";
-import Footer from "@/components/Footer";
+// import Footer from "@/components/Footer";
 import { Fade } from "react-awesome-reveal";
 import Profilepic from "@/assets/images/IMG_9382.jpeg";
 import ProdModal from "@/components/ProdModal";
