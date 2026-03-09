@@ -176,7 +176,7 @@ const ProjectsPage = () => {
           color: "#f16b14",
           desc: "A modern task management application that helps users organize tasks efficiently with a clean and intuitive interface.",
           role: "Front-end ",
-          liveLink: "https://eng-final-project.vercel.app/",
+          liveLink: "https://tasks-forge.vercel.app",
           languaguesUsed: [
             "React",
             "Tailwind CSS",
