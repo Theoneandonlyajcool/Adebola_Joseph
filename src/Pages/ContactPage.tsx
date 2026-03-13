@@ -142,7 +142,7 @@ const ContactPage = () => {
                     <div
                       onClick={() =>
                         window.open(
-                          "https://www.instagram.com/ajcool347/",
+                          "https://www.instagram.com/devdebola/",
                           "_blank",
                         )
                       }
