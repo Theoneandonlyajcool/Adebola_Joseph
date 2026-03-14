@@ -39,7 +39,7 @@ const ProjectsPage = () => {
       projects: [
         {
           image: EazytranzzImage,
-          status: "done",
+          status: "in_production",
           projectName: "Eazy Tranz",
           color: "#9c1260",
           desc: "Eazytranz connects freelancers and remote workers with clients globally, ensuring swift and secure payments.",
@@ -151,7 +151,7 @@ const ProjectsPage = () => {
       projects: [
         {
           image: KwikQImage,
-          status: "done",
+          status: "in_production",
           projectName: "KwikQ",
           color: "#295dff",
           desc: "KwikQ is a smart queue management app that lets users join queues online, track their position, and get notified when it’s nearly their turn. Businesses and banks can manage queues easily through an admin dashboard, improving efficiency and customer experience.",
