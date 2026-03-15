@@ -48,12 +48,6 @@ const IntroPage = () => {
     return () => clearTimeout(timer);
   }, [currentIndex, isDeleting, textArrayIndex]);
 
-  // useEffect(() => {
-  //   setTimeout(() => {
-  //     nav("/home");
-  //   }, 4000);
-  // });
-
   return (
     <div>
       <motion.div
