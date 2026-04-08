@@ -156,7 +156,7 @@ const ProjectsPage = () => {
           color: "#295dff",
           desc: "KwikQ is a smart queue management app that lets users join queues online, track their position, and get notified when it’s nearly their turn. Businesses and banks can manage queues easily through an admin dashboard, improving efficiency and customer experience.",
           role: "Front-end lead",
-          liveLink: "https://kwik-q.vercel.app/",
+          liveLink: "https://kwikq.vercel.app/",
           languaguesUsed: ["React", "Styled components", "CSS", "Rest API"],
         },
         {
@@ -210,7 +210,7 @@ const ProjectsPage = () => {
 
         {/* name content .... */}
         <div className=" h-[52%] min-h-fit flex justify-center items-center">
-          <div className=" w-full max-w-[96%] h-full">
+          <div className=" w-full max-w-[96%] h-full  min-h-fit p-2 flex flex-col justify-center items-start">
             <div className=" w-full flex justify-between items-center mt-2">
               <h1
                 style={{ backgroundColor: `${ele.color}` }}

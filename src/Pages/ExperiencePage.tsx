@@ -10,23 +10,26 @@ const ExperiencePage = () => {
   const [openInternships, setOpenInternships] = useState(false);
   const [openVolunteership, setOpenVolunteership] = useState(false);
 
-  const workExp: Array<{
-    role: string;
-    company: string;
-    location: string;
-    date: string;
-    description: string;
-  }> = [];
+  // const workExp: Array<{
+  //   role: string;
+  //   company: string;
+  //   location: string;
+  //   date: string;
+  //   description: string;
+  // }> = [];
 
-  const internshipExp = [
+  const workExp = [
     {
-      role: "Frontend Developer Intern",
+      role: "Frontend Developer (Contract)",
       company: "Oko AI",
       location: "Remote",
-      date: "January 2026 – present",
+      date: "January 2026 – march 2026",
       description:
         "IMPROVED and added new FEATURES to an existing Next.js, TypeScript, and Tailwind CSS codebase, collaborating closely with backend and UI/UX teams to ship new features and deliver a smooth user experience. Improved performance through lazy loading, code splitting, and efficient data memoization to reduce unnecessary backend requests and speed up the application.",
     },
+  ];
+
+  const internshipExp = [
     {
       role: "Frontend Developer Intern",
       company: "Enovelab institute",

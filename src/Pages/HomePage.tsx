@@ -324,17 +324,20 @@ const HomePage = () => {
             <div className=" w-full h-[90%] flex flex-col md:flex-row justify-between mb-6 md:mb-0">
               {/* Image conatiner */}
 
-              <Fade
-                direction="left"
-                duration={1000}
-                damping={0.1}
-                triggerOnce
-                className=" h-[45%] md:h-full w-full md:max-w-[45%]"
+              <motion.div
+                // direction="left"
+                // duration={1000}
+                // damping={0.1}
+                // triggerOnce
+                // className=" h-[45%] md:h-full w-full md:max-w-[45%]"
+                initial={{ opacity: 0, y: -100 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 1, ease: "easeOut" }}
               >
                 {/* <div className=" h-[45%] md:h-full w-full md:max-w-[45%]"> */}
                 <HomeHeatmapIllustration />
                 {/* </div> */}
-              </Fade>
+              </motion.div>
 
               {/* content */}
 
@@ -434,9 +437,9 @@ const HomePage = () => {
                               alt=""
                             />
 
-                            <p className="my-2 text-md font-bold text-[#0a2472]">
+                            {/* <p className="my-2 text-md font-bold text-[#0a2472]">
                               {ele.logoName}
-                            </p>
+                            </p> */}
                           </button>
                           <span
                             className="whitespace-nowrap absolute -top-14 left-[50%] -translate-x-[50%] 
