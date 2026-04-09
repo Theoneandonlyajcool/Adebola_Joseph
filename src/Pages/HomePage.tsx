@@ -2,7 +2,7 @@ import { useState } from "react";
 import Header from "@/components/Header";
 // import Footer from "@/components/Footer";
 import { Fade } from "react-awesome-reveal";
-import Profilepic from "@/assets/images/IMG_9382.jpeg";
+import Profilepic from "@/assets/images/Young_speaker_on_stage_under_lights.png";
 import ProdModal from "@/components/ProdModal";
 import { motion } from "motion/react";
 import HomeHeatmapIllustration from "@/components/HomeHeatmapIllustration";
