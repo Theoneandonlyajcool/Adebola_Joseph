@@ -1,5 +1,5 @@
 import Header from "@/components/Header";
-import KwikQImage from "/Images/KwikQ.png";
+// import KwikQImage from "/Images/KwikQ.png";
 import DevbyteImage from "/Images/Devbyte.png";
 import EazytranzzImage from "/Images/EazyTranzz.png";
 import Footer from "@/components/Footer";
@@ -149,16 +149,16 @@ const ProjectsPage = () => {
       title: "Personal project",
       key: "personal",
       projects: [
-        {
-          image: KwikQImage,
-          status: "in_production",
-          projectName: "KwikQ",
-          color: "#295dff",
-          desc: "KwikQ is a smart queue management app that lets users join queues online, track their position, and get notified when it’s nearly their turn. Businesses and banks can manage queues easily through an admin dashboard, improving efficiency and customer experience.",
-          role: "Front-end lead",
-          liveLink: "https://kwikq.vercel.app/",
-          languaguesUsed: ["React", "Styled components", "CSS", "Rest API"],
-        },
+        // {
+        //   image: KwikQImage,
+        //   status: "in_production",
+        //   projectName: "KwikQ",
+        //   color: "#295dff",
+        //   desc: "KwikQ is a smart queue management app that lets users join queues online, track their position, and get notified when it’s nearly their turn. Businesses and banks can manage queues easily through an admin dashboard, improving efficiency and customer experience.",
+        //   role: "Front-end lead",
+        //   liveLink: "https://kwikq.vercel.app/",
+        //   languaguesUsed: ["React", "Styled components", "CSS", "Rest API"],
+        // },
         {
           image: WeatheraAppImage,
           status: "done",
